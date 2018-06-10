@@ -11,7 +11,7 @@
 
     <modules>
         <module>memory-api</module>
-        <module>memory-butler</module>
+        <module>memory-heap</module>
         <module>memory-off-heap</module>
     </modules>
 
