@@ -12,6 +12,21 @@
     <artifactId>memory-heap</artifactId>
     <packaging>jar</packaging>
 
+    <properties>
+        <api.version>0.0.1-SNAPSHOT</api.version>
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>com.stone.tc</groupId>
+            <artifactId>memory-api</artifactId>
+            <version>${api.version}</version>
+        </dependency>
+
+
+    </dependencies>
+
     <build>
         <finalName>memory-heap</finalName>
         <plugins>
