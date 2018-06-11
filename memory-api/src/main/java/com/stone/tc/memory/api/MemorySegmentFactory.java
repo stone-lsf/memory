@@ -7,4 +7,6 @@ package com.stone.tc.memory.api;
 public interface MemorySegmentFactory {
 
     MemorySegment allocate(int segmentSize);
+
+    void checkSegmentType(MemorySegment segment);
 }

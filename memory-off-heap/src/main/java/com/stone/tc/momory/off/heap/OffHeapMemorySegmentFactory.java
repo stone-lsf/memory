@@ -15,4 +15,11 @@ public class OffHeapMemorySegmentFactory implements MemorySegmentFactory {
         ByteBuffer byteBuffer = ByteBuffer.allocateDirect(segmentSize);
         return new OffHeapMemorySegment(byteBuffer);
     }
+
+    @Override
+    public void checkSegmentType(MemorySegment segment) {
+        if (!(segment instanceof OffHeapMemorySegment)) {
+            throw new IllegalArgumentException("Memory type is not a " + OffHeapMemorySegment.class.getSimpleName());
+        }
+    }
 }

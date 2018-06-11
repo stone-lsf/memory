@@ -14,17 +14,15 @@ public interface MemorySegmentPool {
 
     MemoryType getMemoryType();
 
-    MemorySegment allocate();
+    MemorySegment allocate() throws MemoryAllocationException;
 
-    List<MemorySegment> allocate(int size);
+    List<MemorySegment> allocate(int size) throws MemoryAllocationException;
 
-    void allocate(int size, List<MemorySegment> target);
+    void allocate(int size, List<MemorySegment> target) throws MemoryAllocationException;
 
     void recycle(MemorySegment segment);
 
     boolean isShutdown();
 
     void shutdown();
-
-    void clear();
 }

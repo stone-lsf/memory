@@ -53,4 +53,8 @@ public interface MemorySegment {
     void get(int offset, ByteBuffer target, int numBytes);
 
     void put(int offset, ByteBuffer source, int numBytes);
+
+    void free();
+
+    boolean isFreed();
 }
